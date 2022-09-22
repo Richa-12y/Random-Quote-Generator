@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+*{
+     margin: 0;
+     outline: none;
+     padding: 0;
+     box-sizing: border-box;
+}
+body{
+     /* background-image: url(./img/alfons-morales-YLSwjSy7stw-unsplash.jpg);
+     background-repeat:repeat-x;
+     background-size: contain; */
+     background-color:#E0E5EC;
+     width: 100vw;
+     height: 100vh;
+     scrollbar-width: 10px;
+     scrollbar-color: red green;
+
+}
+
+.container{
+     width: 100vw;
+     height: 100vh;
+     /* background-color: aqua; */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.quote-container{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-around;
+     width:50%;
+     height: 70%;
+     background-color:#E0E5EC;
+     box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+
+}
+.img-tex-container{
+     width: 80%;
+     height: 80%;
+     background-color:#E0E5EC;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
+     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+#quotegen{
+     /* background-color: blue; */
+     width: 400px;
+     font-size:14px;
+     font-weight: 700;
+     text-decoration: underline;
+     text-transform:none;
+     line-height: 2;
+     padding: 25px;
+     cursor: pointer;
+}
+img{
+     width: 100px;
+     height: 100px;
+     border-radius:50%;
+     padding: 8px;
+     object-fit: cover;
+}
+button {
+     background-color:#E0E5EC;
+     border: none;
+     border-radius: 6px;
+     box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5);
+     color: #4D3252;
+     font-weight: 700;
+     overflow: hidden;
+     position: relative;
+     text-transform: uppercase;
+     padding: 15px;
+    
+   }
+   
+   button:after {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 200%;
+     height: 100%;
+     opacity: 0;
+     transform: translateX(-100%);
+     
+     background: rgba(255, 255, 255, 0.13);
+     background: linear-gradient(
+       to right, 
+       rgba(255, 255, 255, 0.13) 0%,
+       rgba(255, 255, 255, 0.13) 77%,
+       rgba(255, 255, 255, 0.5) 92%,
+       rgba(255, 255, 255, 0.3) 100%
+     );
+   }
+   
+   button:hover:after {
+     opacity: 1;
+     top: 0;
+     left: 0;
+     transform: translateX(0);
+     transition-property: transform, opacity;
+     transition-duration: 0.7s, 0.15s;
+     transition-timing-function: ease;
+   }
+   
+   button:active:after {
+     opacity: 0;
+   }
+  .button{
+     padding: 10px;
+  }
+ @media (max-width:776px){
+     .img-tex-container{
+          /* background-color: red; */
+          display: flex;
+          flex-direction: column-reverse;
+          justify-content: center;
+          align-items: center;
+         
+          /* text-overflow:clip */
+     }
+     #quotegen{
+          /* background-color: blue; */
+          width: 100%;
+          max-height: 60%;
+          text-decoration: underline;
+          text-transform: none;
+          line-height: 2;
+          padding: 25px;
+          overflow:scroll;
+          overflow-x: hidden;
+          text-overflow:ellipsis;
+          cursor: pointer;
+          font-size:14px;
+          font-weight: 700;
+     }
+    
+     #quotegen::-webkit-scrollbar {
+          width: 5px;
+          background-color:#adaeaf;
+      }
+      #quotegen::-webkit-scrollbar-thumb{
+          height: 5px;
+          border-radius: 10px;
+          background-color: rgb(175, 176, 176);
+          -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+
+      }
+ }
